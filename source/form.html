@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка: Вязание на заказ</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -13,7 +15,7 @@
           </a>
           <button class="main-nav__toggle" type="button"></button>
         </div>
-        <ul class="main-nav_list site-list">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link">Каталог товаров</a>
           </li>
@@ -37,9 +39,13 @@
         </ul>
         <p class="main-nav__comment">Бесплатная доставка по России</p>
       </nav>
-      <h1 class="page-header__title page-title">Вязание на заказ</h1>
+      <div class="page-header__title main-title">
+        <div class="main-title__wrapper">
+          <h1 class="page-title">Вязание на заказ</h1>
+        </div>
+      </div>
     </header>
-    <main>
+    <main class="main-container">
       <section class="order">
         <p class="order__title">
           Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
@@ -107,21 +113,18 @@
             <legend class="form__group-title">ФИО</legend>
             <ul class="form__name-list">
               <li class="form__name-item">
-                <label class="form__label input">
+                <label class="form__label input">Имя:
                   <input class="input__field" type="text" name="Имя" placeholder="Введите ваше имя*" required="required">
-                  Имя:
                 </label>
               </li>
               <li class="form__name-item">
-                <label class="form__label input">
+                <label class="form__label input">Фамилия:
                   <input class="input__field" type="text" name="Фамилия" placeholder="Укажите фамилию*" required="required">
-                  Фамилия:
                 </label>
               </li>
               <li class="form__name-item">
-                <label class="form__label input">
+                <label class="form__label input">Отчество:
                   <input class="input__field" type="text" name="Отчество" placeholder="Отчество, если желаете">
-                  Отчество:
                 </label>
               </li>
             </ul>
@@ -152,23 +155,25 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__social social">
-        <a class="social__link" href="#">Instagram
-          <img src="http://placehold.it/22x21" width="22" height="21" alt="Instagram logo">
-        </a>
-        <a class="social__link" href="#">Facebook
-          <img src="http://placehold.it/15x28" width="15" height="28" alt="Facebook logo">
-        </a>
-        <a class="social__link" href="#">Twitter
-          <img src="http://placehold.it/23x20" width="23" height="20" alt="Twitter logo">
-        </a>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано
-          <a class="copyright__link" href="#">
-            <img class="copyright__image" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__social social">
+          <a class="social__link" href="#">Instagram
+            <img src="http://placehold.it/22x21" width="22" height="21" alt="Instagram logo">
           </a>
-        </p>
+          <a class="social__link" href="#">Facebook
+            <img src="http://placehold.it/15x28" width="15" height="28" alt="Facebook logo">
+          </a>
+          <a class="social__link" href="#">Twitter
+            <img src="http://placehold.it/23x20" width="23" height="20" alt="Twitter logo">
+          </a>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Разработано
+            <a class="copyright__link" href="#">
+              <img class="copyright__image" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   </body>
