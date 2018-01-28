@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка: Каталог товаров</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -13,7 +15,7 @@
           </a>
           <button class="main-nav__toggle" type="button"></button>
         </div>
-        <ul class="main-nav_list site-list">
+        <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link">Каталог товаров</a>
           </li>
@@ -37,47 +39,57 @@
         </ul>
         <p class="main-nav__comment">Бесплатная доставка по России</p>
       </nav>
-      <h1 class="page-header__title page-title">Каталог товаров</h1>
+      <div class="page-header__title main-title">
+        <div class="main-title__wrapper">
+          <h1 class="page-title">Каталог товаров</h1>
+        </div>
+      </div>
     </header>
-    <main>
+    <main class="main-container">
       <section class="product-catalog">
         <div class="product-card">
-          <img src="http://placehold.it/316x462" width="316" height="462" alt="Зайчик-попрыгайчик">
-          <div class="product-card__text">
-            <h2 class="product-card__title">Зайчик-попрыгайчик</h2>
-            <p class="product-card__description">Рост 30 см, вес 200 г</p>
-          </div>
-          <div class="product-card__ordering">
-            <span class="product-card__price">1 200 руб.</span>
-            <button class="product-card__in-basket">
-              <img src="http://placehold.it/20x19" width="20" height="19" alt="В корзину">
-            </button>
-          </div>
-        </div>
-        <div class="product-card">
-          <img src="http://placehold.it/316x462" width="316" height="462" alt="Корзинка для белья">
-          <div class="product-card__text">
-            <h2 class="product-card__title">Корзинка для белья</h2>
-            <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
-          </div>
-          <div class="product-card__ordering">
-            <span class="product-card__price">690 руб.</span>
-            <button class="product-card__in-basket">
-              <img src="http://placehold.it/20x19" width="20" height="19" alt="В корзину">
-            </button>
+          <img src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
+          <div class="product-card__description">
+            <div class="product-card__text">
+              <h2 class="product-card__title">Зайчик-попрыгайчик</h2>
+              <p class="product-card__characteristic">Рост 30 см, вес 200 г</p>
+            </div>
+            <div class="product-card__ordering">
+              <span class="product-card__price">1 200 руб.</span>
+              <button class="product-card__in-basket">
+                <img src="http://placehold.it/20x19" width="20" height="19" alt="В корзину">
+              </button>
+            </div>
           </div>
         </div>
         <div class="product-card">
-          <img src="http://placehold.it/316x462" width="316" height="462" alt="Большая корзинка для игрушек">
-          <div class="product-card__text">
-            <h2 class="product-card__title">Большая корзинка для игрушек</h2>
-            <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
+          <img src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+          <div class="product-card__description">
+            <div class="product-card__text">
+              <h2 class="product-card__title">Корзинка для белья</h2>
+              <p class="product-card__characteristic">Диаметр 15 см, высота 10 см</p>
+            </div>
+            <div class="product-card__ordering">
+              <span class="product-card__price">690 руб.</span>
+              <button class="product-card__in-basket">
+                <img src="http://placehold.it/20x19" width="20" height="19" alt="В корзину">
+              </button>
+            </div>
           </div>
-          <div class="product-card__ordering">
-            <span class="product-card__price">1 500 руб.</span>
-            <button class="product-card__in-basket">
-              <img src="http://placehold.it/20x19" width="20" height="19" alt="В корзину">
-            </button>
+        </div>
+        <div class="product-card">
+          <img src="http://placehold.it/260x195" width="260" height="195" alt="Большая корзинка для игрушек">
+          <div class="product-card__description">
+            <div class="product-card__text">
+              <h2 class="product-card__title">Большая корзинка для игрушек</h2>
+              <p class="product-card__characteristic">Диаметр 30 см, высота 30 см</p>
+            </div>
+            <div class="product-card__ordering">
+              <span class="product-card__price">1 500 руб.</span>
+              <button class="product-card__in-basket">
+                <img src="http://placehold.it/20x19" width="20" height="19" alt="В корзину">
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -93,23 +105,25 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__social social">
-        <a class="social__link" href="#">Instagram
-          <img src="http://placehold.it/22x21" width="22" height="21" alt="Instagram logo">
-        </a>
-        <a class="social__link" href="#">Facebook
-          <img src="http://placehold.it/15x28" width="15" height="28" alt="Facebook logo">
-        </a>
-        <a class="social__link" href="#">Twitter
-          <img src="http://placehold.it/23x20" width="23" height="20" alt="Twitter logo">
-        </a>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано
-          <a class="copyright__link" href="#">
-            <img class="copyright__image" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__social social">
+          <a class="social__link" href="#">Instagram
+            <img src="http://placehold.it/22x21" width="22" height="21" alt="Instagram logo">
           </a>
-        </p>
+          <a class="social__link" href="#">Facebook
+            <img src="http://placehold.it/15x28" width="15" height="28" alt="Facebook logo">
+          </a>
+          <a class="social__link" href="#">Twitter
+            <img src="http://placehold.it/23x20" width="23" height="20" alt="Twitter logo">
+          </a>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="copyright__text">Разработано
+            <a class="copyright__link" href="#">
+              <img class="copyright__image" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   </body>
