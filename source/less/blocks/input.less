@@ -13,3 +13,43 @@
   border-bottom: 2px solid @base-color;
   color: rgba(68, 68, 68, 0.3);
 }
+
+@media (min-width: @tablet-width) {
+  .input {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .input__field {
+    width: 375px;
+    font-size: 19px;
+    line-height: 18px;
+    margin-left: 20px;
+    padding-left: 18px;
+    box-sizing: border-box;
+
+    &--name {
+      width: 427px;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin-left: 0;
+      background-color: #f1f1f1;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input__field {
+    width: 573px;
+
+    &--name {
+      width: 626px;
+    }
+
+    &--contacts {
+      width: 100%;
+    }
+  }
+}

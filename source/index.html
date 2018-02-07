@@ -9,11 +9,13 @@
   <body>
     <header class="page-header">
       <nav class="main-nav">
-        <div class="main-nav__top">
-          <a class="main-nav__logo logo">
-            <img class="logo__image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Мишка">
-          </a>
-          <button class="main-nav__toggle" type="button"></button>
+        <div class="main-nav__top-wrapper">
+          <div class="main-nav__top">
+            <a class="main-nav__logo logo">
+              <img class="logo__image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип Мишка">
+            </a>
+            <button class="main-nav__toggle" type="button"></button>
+          </div>
         </div>
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -41,7 +43,7 @@
       </nav>
       <div class="page-header__title main-title">
         <div class="main-title__wrapper">
-          <h1 class="main-title__text">Милые штуки ручной работы для дома</h1>
+          <h1 class="main-title__text">Милые штуки ручной<br> работы для дома</h1>
         </div>
         <ul class="main-title__menu page-menu">
           <li class="page-menu__item">
@@ -51,7 +53,6 @@
             <a class="page-menu__link page-menu__link--toys" href="#">Детские<br> игрушки</a>
           </li>
         </ul>
-
       </div>
     </header>
     <main>
@@ -99,35 +100,41 @@
         </ul>
       </section>
       <section class="reviews">
-        <h2 class="reviews__title">Отзывы</h2>
-        <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-        <p class="reviews__autor-name">Анастасия Красильникова</p>
-        <p class="reviews__autor-contact">@misssssiskras</p>
-        <table class="reviews__slider-controls">
-          <tr>
-            <td>
-              <a class="reviews__btn" href="#">
-                <img src="http://placehold.it/50x26" width="50" height="26" alt="Назад">
-              </a>
-            </td>
-            <td>
-              <a class="reviews__btn" href="#">
-                <img src="http://placehold.it/50x26" width="50" height="26" alt="Вперед">
-              </a>
-            </td>
-          </tr>
-        </table>
-        <a class="reviews__write button" href="#">Написать</a>
+        <div class="reviews__wrapper">
+          <h2 class="reviews__title">Отзывы</h2>
+          <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+          <p class="reviews__autor-name">Анастасия Красильникова</p>
+          <p class="reviews__autor-contact">@misssssiskras</p>
+          <table class="reviews__slider-controls">
+            <tr>
+              <td>
+                <a class="reviews__btn" href="#">
+                  <img src="http://placehold.it/50x26" width="50" height="26" alt="Назад">
+                </a>
+              </td>
+              <td>
+                <a class="reviews__btn" href="#">
+                  <img src="http://placehold.it/50x26" width="50" height="26" alt="Вперед">
+                </a>
+              </td>
+            </tr>
+          </table>
+          <a class="reviews__write button" href="#">Написать</a>
+        </div>
       </section>
       <section class="contacts">
         <div class="contacts__data">
           <h2 class="contacts__title">Контакты</h2>
-          <span class="contacts__info">email:</span>
-          <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          <span class="contacts__info">адрес:</span>
-          <p class="contacts__adress">г. Санкт-Петербург, ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
+          <div class="contacts__email-block">
+            <span class="contacts__info">email:</span>
+            <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </div>
+          <div class="contacts__adress-block">
+            <span class="contacts__info">адрес:</span>
+            <p class="contacts__adress">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
+          </div>
         </div>
-        <div class="map">
+        <div class="contacts__map map">
           <!--<img class="map__image" src="img/map-mobile@1x.jpg" width="322" height="457" alt="Карта"> -->
         </div>
         <a class="contacts__button button" href="#">Напишите нам</a>
@@ -135,6 +142,9 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo logo-footer">
+          <img class="logo-footer__image" src="http://placehold.it/102x34" width="102" height="34" alt="Логотип в футере">
+        </div>
         <div class="page-footer__social social">
           <a class="social__link" href="#">Instagram
             <img src="http://placehold.it/22x21" width="22" height="21" alt="Instagram logo">
@@ -147,11 +157,11 @@
           </a>
         </div>
         <div class="page-footer__copyright copyright">
-          <p class="copyright__text">Разработано
-            <a class="copyright__link" href="#">
+          <a class="copyright__link" href="#">
+            <p class="copyright__text">Разработано
               <img class="copyright__image" src="http://placehold.it/27x34" width="27" height="34" alt="Логотип HTML Academy">
-            </a>
-          </p>
+            </p>
+          </a>
         </div>
       </div>
     </footer>

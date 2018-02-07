@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   border: 0;
-  border-top: 1px solid #62d1ba;
   margin-bottom: 30px;
 }
 
@@ -11,14 +10,25 @@
 }
 
 .form__group-title {
+  display: block;
+  position: relative;
   font-size: 17px;
   line-height: 16px;
   color: #63d1bb;
   font-weight: 700;
   padding: 0;
-  padding-right: 27px;
   text-transform: uppercase;
   margin-bottom: 27px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 198px;
+    height: 1px;
+    background-color: #62d1ba;
+  }
 }
 
 .form__radio-list {
@@ -47,7 +57,7 @@
 
 .form__message {
   width: 100%;
-  height: 108px;
+  min-height: 138px;
   box-sizing: border-box;
   border: 2px solid @base-color;
   padding: 15px;
@@ -70,3 +80,126 @@
   color: @base-color;
   width: 100%;
 }
+
+@media (min-width: @tablet-width) {
+  .form__group {
+    border-top: 0;
+    margin-bottom: 0;
+    padding-top: 35px;
+    padding-bottom: 26px;
+
+    &--gray {
+      background-color: #f1f1f1;
+    }
+
+    &:nth-child(4) {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(5) {
+      padding-top: 0;
+    }
+  }
+
+  .form__group-wrapper {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .form__group-title {
+    width: 167px;
+    padding-right: 0;
+    padding-top: 15px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .form__message {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .form__checkbox-list {
+    width: 501px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__checkbox-item {
+    width: 250.5px;
+    margin-bottom: 9px;
+    padding-top: 15px;
+  }
+
+  .form__radio-item {
+    padding-top: 15px;
+    margin-bottom: 9px;
+  }
+
+  .form__name-list {
+    width: 501px;
+  }
+
+  .form__name-item {
+    margin-bottom: 24px;
+  }
+
+  .form__submit {
+    width: 668px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form__annotation {
+    font-size: 17px;
+    line-height: 30px;
+    order: 1;
+    margin-bottom: 0;
+    margin-top: 18px;
+
+  }
+
+  .form__button {
+    width: 230px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__group-wrapper {
+    width: 1050px;
+  }
+
+  .form__group-title {
+    width: 175px;
+    padding-left: 64px;
+    box-sizing: border-box;
+  }
+
+  .form__checkbox-item {
+    width: 263px;
+  }
+
+  .form__checkbox-list {
+    width: 875px;
+  }
+
+  .form__name-list {
+    width: 700px;
+  }
+
+  .form__message {
+    width: 700px;
+  }
+
+  .form__submit {
+    width: 700px;
+  }
+}
+
