@@ -19,3 +19,26 @@
       display: block;
     }
 }
+
+@media (min-width: @tablet-width) {
+  .page-menu {
+    width: 668px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-menu__item {
+    width: 50%;
+  }
+
+  .page-menu__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-menu {
+    width: 1050px;
+  }
+}

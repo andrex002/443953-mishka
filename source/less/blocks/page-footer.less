@@ -9,6 +9,38 @@
   margin: 0 auto;
 }
 
+.page-footer__logo {
+  display: none;
+}
+
 .page-footer__social {
   border-bottom: 1px solid #e5e5e5;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
+
+  .page-footer__wrapper {
+    width: 668px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__social {
+    border: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: 1050px;
+  }
 }
