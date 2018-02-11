@@ -9,7 +9,7 @@
   width: 260px;
   margin: 0 auto;
   box-sizing: border-box;
-  padding-left: 85px;
+  padding-left: 86px;
   padding-bottom: 22px;
   padding-top: 22px;
   display: flex;
@@ -23,6 +23,48 @@
 
 .main-nav__comment {
   display: none;
+}
+
+.main-nav__toggle {
+  position: relative;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  width: 21px;
+  height: 21px;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #221f1f;
+  box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+}
+
+.main-nav--opened .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: -3px;
+  width: 27px;
+  height: 2px;
+  background-color: #221f1f;
+  transform: rotate(-45deg);
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: -3px;
+  width: 27px;
+  height: 2px;
+  background-color: #221f1f;
+  transform: rotate(45deg);
 }
 
 
@@ -69,6 +111,7 @@
 
   .main-nav__top-wrapper {
     order: 2;
+    margin-right: 90px;
   }
 
   .main-nav__comment {

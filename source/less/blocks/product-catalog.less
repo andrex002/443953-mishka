@@ -2,9 +2,16 @@
   padding-top: 30px;
 }
 
+@media (min-width: @tablet-width) {
+  .product-catalog {
+    padding-top: 0;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .product-catalog {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 4px;
   }
 }
