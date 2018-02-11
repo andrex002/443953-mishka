@@ -7,11 +7,50 @@
 
 .input__field {
   width: 100%;
+  line-height: 21px;
   padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 13px;
+  padding-right: 40px;
   border: 0;
   border-bottom: 2px solid @base-color;
-  color: rgba(68, 68, 68, 0.3);
+  box-sizing: border-box;
+
+
+  &--tel {
+    padding-top: 5px;
+    font-size: 17px;
+    background-image: url(../img/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-position: 227px 1px;
+
+    &:hover,
+    &:focus {
+      background-image: url(../img/icon-phone-hover.svg);
+    }
+  }
+
+  &--mail {
+    padding-top: 5px;
+    font-size: 17px;
+    background-image: url(../img/icon-mail.svg);
+    background-repeat: no-repeat;
+    background-position: 225px 1px;
+
+    &:hover,
+    &:focus {
+      background-image: url(../img/icon-mail-hover.svg);
+    }
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+    outline: 0;
+  }
+}
+
+.form__name-item:hover .input__icon {
+  fill: #62d1ba;
 }
 
 @media (min-width: @tablet-width) {
@@ -26,6 +65,7 @@
     line-height: 18px;
     margin-left: 20px;
     padding-left: 18px;
+    padding-right: 70px;
     box-sizing: border-box;
 
     &--name {
@@ -35,6 +75,24 @@
     &--contacts {
       width: 100%;
       margin-left: 0;
+      background-color: #f1f1f1;
+    }
+
+    &--tel {
+      width: 100%;
+      padding-top: 13px;
+      margin-bottom: 5px;
+      margin-left: 0;
+      background-position: 451px 13px;
+      background-color: #f1f1f1;
+    }
+
+    &--mail {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 5px;
+      padding-top: 11px;
+      background-position: 448px 11px;
       background-color: #f1f1f1;
     }
   }
@@ -50,6 +108,16 @@
 
     &--contacts {
       width: 100%;
+    }
+
+    &--tel {
+      width: 100%;
+      background-position-x: 667px;
+    }
+
+    &--mail {
+      width: 100%;
+      background-position-x: 664px;
     }
   }
 }

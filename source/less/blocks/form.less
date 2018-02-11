@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   border: 0;
-  margin-bottom: 30px;
+  margin-bottom: 17px;
 }
 
 .form__group:nth-child(6) {
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .form__group-title {
@@ -18,7 +18,7 @@
   font-weight: 700;
   padding: 0;
   text-transform: uppercase;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   &::before {
     content: "";
@@ -36,7 +36,9 @@
 }
 
 .form__radio-item {
-  margin-bottom: 10px;
+  &:nth-child(2) {
+    padding-bottom: 11px;
+  }
 }
 
 .form__checkbox-list {
@@ -45,6 +47,10 @@
 
 .form__checkbox-item {
   margin-bottom: 22px;
+
+  &:nth-child(6) {
+    padding-bottom: 14px;
+  }
 }
 
 .form__checkbox-item:last-child {
@@ -55,21 +61,41 @@
   .ul-reset;
 }
 
+.form__name-item {
+  position: relative;
+  padding-top: 4px;
+  padding-bottom: 16px;
+
+  &:nth-child(3) {
+    padding-bottom: 14px;
+  }
+}
+
+.form__group-title--contacts {
+  margin-bottom: 15px;
+}
+
 .form__message {
   width: 100%;
-  min-height: 138px;
+  min-height: 141px;
   box-sizing: border-box;
   border: 2px solid @base-color;
   padding: 15px;
   font-size: 17px;
   line-height: 18px;
+
+  &:hover,
+  &:focus {
+    border-color: #62d1ba;
+  }
 }
 
 .form__annotation {
   margin: 0;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
+  margin-top: -3px;
 }
 
 .form__button {
@@ -79,13 +105,14 @@
   text-transform: uppercase;
   color: @base-color;
   width: 100%;
+  background: none;
 }
 
 @media (min-width: @tablet-width) {
   .form__group {
     border-top: 0;
     margin-bottom: 0;
-    padding-top: 35px;
+    padding-top: 50px;
     padding-bottom: 26px;
 
     &--gray {
@@ -99,6 +126,10 @@
     &:nth-child(5) {
       padding-top: 0;
     }
+
+    &:nth-child(6) {
+      margin-bottom: 29px;
+    }
   }
 
   .form__group-wrapper {
@@ -111,7 +142,7 @@
   .form__group-title {
     width: 167px;
     padding-right: 0;
-    padding-top: 15px;
+    padding-top: 17px;
 
     &::before {
       display: none;
@@ -119,6 +150,7 @@
   }
 
   .form__message {
+    width: 501px;
     font-size: 19px;
     line-height: 18px;
   }
@@ -130,14 +162,21 @@
   }
 
   .form__checkbox-item {
-    width: 250.5px;
-    margin-bottom: 9px;
-    padding-top: 15px;
+    width: 262px;
+    margin-bottom: 23px;
+
+    &:nth-child(2n) {
+      width: 239px;
+    }
   }
 
   .form__radio-item {
-    padding-top: 15px;
-    margin-bottom: 9px;
+    padding-top: 0;
+    margin-bottom: 24px;
+
+    &:nth-child(2) {
+      padding-bottom: 0;
+    }
   }
 
   .form__name-list {
@@ -145,7 +184,13 @@
   }
 
   .form__name-item {
-    margin-bottom: 24px;
+    margin-bottom: 19px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    &:nth-child(3) {
+      padding-bottom: 5px;
+    }
   }
 
   .form__submit {
@@ -160,7 +205,7 @@
     line-height: 30px;
     order: 1;
     margin-bottom: 0;
-    margin-top: 18px;
+    margin-top: 8px;
 
   }
 
@@ -178,12 +223,17 @@
 
   .form__group-title {
     width: 175px;
+    padding-top: 19px;
     padding-left: 64px;
     box-sizing: border-box;
   }
 
   .form__checkbox-item {
-    width: 263px;
+    width: 262px;
+
+    &:nth-child(2n) {
+      width: 262px;
+    }
   }
 
   .form__checkbox-list {
@@ -200,6 +250,7 @@
 
   .form__submit {
     width: 700px;
+    margin-top: -4px;
   }
 }
 

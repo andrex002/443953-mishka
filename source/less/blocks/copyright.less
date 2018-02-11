@@ -7,10 +7,26 @@
   line-height: 18px;
   color: @black;
   font-weight: 700;
+  margin-top: 0;
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-.copyright__image {
-  margin-left: 30px;
+.copyright__text:hover .copyright__icon,
+.copyright__text:focus .copyright__icon {
+    fill: rgb(70, 193, 174);
+  }
+
+.copyright__text:active .copyright__icon {
+    fill: rgba(70, 193, 174, 0.3);
+}
+
+.copyright__icon {
+  margin-left: 25px;
+  vertical-align: middle;
+  fill: rgb(99, 209, 187);
 }
 
 @media (min-width: @tablet-width) {
