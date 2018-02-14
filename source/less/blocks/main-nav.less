@@ -2,12 +2,12 @@
 }
 
 .main-nav__top-wrapper {
-  border-bottom: 1px solid #ececec;
-}
-
-.main-nav__top {
   width: 260px;
   margin: 0 auto;
+}
+
+
+.main-nav__top {
   box-sizing: border-box;
   padding-left: 86px;
   padding-bottom: 22px;
@@ -82,6 +82,9 @@
   }
 
   .main-nav__top-wrapper {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
     border: 0;
     order: 1;
   }
@@ -100,6 +103,7 @@
     display: block;
     order: 4;
     margin: 0;
+    z-index: 1;
   }
 }
 
@@ -110,6 +114,7 @@
   }
 
   .main-nav__top-wrapper {
+    width: auto;
     order: 2;
     margin-right: 90px;
   }

@@ -1,0 +1,150 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 320px;
+  min-height: 337px;
+  background-color: @white;
+  box-sizing: border-box;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 45px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: -160px;
+  margin-top: -168.5px;
+  border-top: 1px solid #c7c7c7;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+  display: none;
+}
+
+.modal__title {
+  font-size: 25px;
+  line-height: 30px;
+  color: @black;
+  text-transform: uppercase;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 0;
+  margin-bottom: 13px;
+}
+
+.modal__text {
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 23px;
+}
+
+.modal__field {
+  width: 82px;
+  height: 52px;
+  display: none;
+}
+
+.modal__field:hover .modal__label::before {
+  border-color: rgba(68, 68, 68, 0.3);
+}
+
+.modal__field--s:checked ~ .modal__label--s::before,
+.modal__field--m:checked ~ .modal__label--m::before,
+.modal__field--l:checked ~ .modal__label--l::before{
+  border-color: #62d1ba;
+}
+
+.modal__label {
+  position: relative;
+  display: block;
+  width: 82px;
+  height: 52px;
+  font-size: 0;
+  line-height: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 82px;
+    height: 52px;
+    font-size: 17px;
+    font-weight: 700;
+    left: 0;
+    top: 0;
+    line-height: 48px;
+    border: 2px solid rgba(68, 68, 68, 0.1);
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  &--s::before {
+    content: "S";
+  }
+
+  &--m::before {
+    content: "M";
+  }
+
+  &--l::before {
+    content: "L";
+  }
+}
+
+.modal__label:hover::before {
+  border-color: rgba(68, 68, 68, 0.3);
+}
+
+.modal__checkbox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.modal__btn {
+  display: block;
+  width: 100%;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  color: @white;
+  text-transform: uppercase;
+  background-color: #63d1bb;
+  border: none;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 566px;
+    padding-left: 106px;
+    padding-right: 106px;
+    padding-top: 33px;
+    margin-left: -283px;
+    border: 1px solid #c7c7c7;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    line-height: 57px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .modal__text {
+    font-size: 17px;
+  }
+
+  .modal__label {
+    width: 112px;
+
+    &::before {
+      width: 112px;
+    }
+  }
+
+  .modal__field {
+    width: 112px;
+  }
+}
+

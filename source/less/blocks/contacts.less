@@ -4,7 +4,8 @@
 
 .contacts__data {
   width: 260px;
-  margin: 0 auto 38px auto;
+  margin: 0 auto;
+  margin-bottom: 38px;
 
 }
 
@@ -60,6 +61,7 @@
   display: block;
   text-align: center;
   text-transform: uppercase;
+  box-sizing: border-box;
 }
 
 @media (min-width: @tablet-width) {
@@ -76,7 +78,7 @@
     padding-top: 14px;
     background-image: url(../img/icon-flag.svg);
     background-repeat: no-repeat;
-    background-position: right top;
+    background-position: 618px top;
   }
 
   .contacts__title {
@@ -97,7 +99,7 @@
 
   .contacts__info {
     font-size: 17px;
-    width: 75px;
+    width: 73px;
   }
 
   .contacts__email {
@@ -110,7 +112,7 @@
   }
 
   .contacts__button {
-    width: 226px;
+    width: 230px;
     font-size: 17px;
   }
 }
@@ -129,10 +131,14 @@
 
   .contacts__data {
     width: 350px;
-    padding-left: 173px;
+    padding-left: 175px;
     padding-top: 70px;
     margin: 0;
     background-position: 63px 61px;
+  }
+
+  .contacts__info {
+    width: 74px;
   }
 
   .contacts__map {
