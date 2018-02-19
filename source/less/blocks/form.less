@@ -6,7 +6,7 @@
 }
 
 .form__group:nth-child(6) {
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .form__group-title {
@@ -71,11 +71,53 @@
   }
 }
 
+.form__field {
+  position: relative;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @base-color;
+  width: 260px;
+  line-height: 21px;
+  padding-top: 8px;
+  padding-bottom: 15px;
+  padding-right: 40px;
+  border: 0;
+  border-bottom: 2px solid @base-color;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+
+  &--tel {
+    font-size: 17px;
+    background-image: url(../img/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-position: 226px 4px;
+
+    &:hover,
+    &:focus {
+      background-image: url(../img/icon-phone-hover.svg);
+    }
+  }
+
+  &--mail {
+    padding-top: 5px;
+    font-size: 17px;
+    background-image: url(../img/icon-mail.svg);
+    background-repeat: no-repeat;
+    background-position: 223px 2px;
+
+    &:hover,
+    &:focus {
+      background-image: url(../img/icon-mail-hover.svg);
+    }
+  }
+}
+
 .form__group-title--contacts {
   margin-bottom: 15px;
 }
 
 .form__message {
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: @base-color;
   width: 100%;
   min-height: 141px;
   box-sizing: border-box;
@@ -128,7 +170,7 @@
     }
 
     &:nth-child(6) {
-      margin-bottom: 29px;
+      margin-bottom: 30px;
     }
   }
 
@@ -146,6 +188,32 @@
 
     &::before {
       display: none;
+    }
+  }
+
+  .form__field {
+    width: 501px;
+    font-size: 19px;
+    line-height: 18px;
+    margin-left: 20px;
+    padding-left: 18px;
+    padding-right: 70px;
+    box-sizing: border-box;
+
+    &--tel {
+      padding-top: 11px;
+      margin-bottom: 22px;
+      margin-left: 0;
+      background-position: 450px 11px;
+      background-color: #f1f1f1;
+    }
+
+    &--mail {
+      margin-left: 0;
+      margin-bottom: 22px;
+      padding-top: 11px;
+      background-position: 448px 11px;
+      background-color: #f1f1f1;
     }
   }
 
@@ -242,6 +310,18 @@
 
   .form__name-list {
     width: 700px;
+  }
+
+  .form__field {
+    width: 700px;
+
+    &--tel {
+      background-position-x: 667px;
+    }
+
+    &--mail {
+      background-position-x: 664px;
+    }
   }
 
   .form__message {
